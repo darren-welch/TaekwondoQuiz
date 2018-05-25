@@ -15,7 +15,7 @@ export class QuizComponent implements OnInit {
 
   ngOnInit() {
     let ppant = JSON.parse(localStorage.getItem('participant'));
-    this.setColours(ppant.Belt;
+    this.setColours(ppant.Belt);
 
 
     if (parseInt(localStorage.getItem('seconds')) > 0) {
@@ -80,7 +80,7 @@ export class QuizComponent implements OnInit {
         this.textColour = "white-text";
         break;       
       } 
-    }
+     }
     
      
   }
