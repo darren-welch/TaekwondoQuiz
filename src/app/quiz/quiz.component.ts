@@ -8,11 +8,16 @@ import { QuizService } from '../shared/quiz.service';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
-  
+  bgColour: string;
+  textColour: string;
 
   constructor(private router: Router, private quizService: QuizService) { }
 
   ngOnInit() {
+    let ppant = JSON.parse(localStorage.getItem('participant'));
+    this.setColours(ppant.Belt;
+
+
     if (parseInt(localStorage.getItem('seconds')) > 0) {
       this.quizService.seconds = parseInt(localStorage.getItem('seconds'));
       this.quizService.qnProgress = parseInt(localStorage.getItem('qnProgress'));
@@ -39,6 +44,45 @@ export class QuizComponent implements OnInit {
       this.quizService.seconds++;
       localStorage.setItem('seconds', this.quizService.seconds.toString());
     }, 1000);
+  }
+
+  setColours(beltColour: string) 
+  {
+       
+    switch(beltColour) { 
+      case "White": { 
+         this.bgColour = "white";
+         this.textColour = "black-text";
+         break; 
+      }
+      case "Yellow Tag": { 
+        this.bgColour = "yellow";
+        this.textColour = "black-text";
+        break; 
+     }
+     case "Yellow": { 
+      this.bgColour = "yellow";
+      this.textColour = "black-text";
+      break; 
+   }
+   case "Green Tag": { 
+    this.bgColour = "green darken-4";
+    this.textColour = "white-text";
+    break; 
+ }
+ case "Green": { 
+  this.bgColour = "green darken-4";
+  this.textColour = "white-text";
+  break; 
+}
+      default: {
+        this.bgColour = "teal";
+        this.textColour = "white-text";
+        break;       
+      } 
+    }
+    
+     
   }
 
   Answer(qID, choice) {

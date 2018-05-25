@@ -1,12 +1,12 @@
 <app-navbar></app-navbar>
 <div class="row" *ngIf="quizService.qns && this.quizService.qnProgress != 10">
   <div class="col s8 offset-s2">
-    <span>Time Elapsed : {{quizService.displayTimeElapsed()}}</span>
+    <span>Time Elapsed : {{quizService.displayTimeElapsed()}} </span>
     <div class="progress">
       <div class="determinate" [style.width.%]="(quizService.qnProgress+1)*10"></div>
     </div>
-    <div class="card green darken-4">
-      <div class="card-content white-text">
+    <div class="card {{bgColour}}">
+      <div class="card-content {{textColour}}">
         <span class="card-title">{{quizService.qnProgress+1}}</span>
         <p>{{quizService.qns[quizService.qnProgress].Qn}}</p>
         <div *ngIf="quizService.qns[quizService.qnProgress].ImageName!=null">

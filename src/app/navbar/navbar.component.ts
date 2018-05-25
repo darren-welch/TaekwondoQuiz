@@ -18,7 +18,8 @@ export class NavbarComponent implements OnInit {
   {
     localStorage.clear();
     clearInterval(this.quizService.timer);
-    this.router.navigate(['/register']);
+    //this.router.navigate(['/register']);
+    window.location.reload();
   }
 
 }
