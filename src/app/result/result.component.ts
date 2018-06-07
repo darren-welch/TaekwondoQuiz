@@ -34,6 +34,11 @@ export class ResultComponent implements OnInit {
           });
         }
       );
+
+        this.quizService.submitScore().subscribe(() => {
+          //this.restart();
+        });
+
     }
     else
       this.router.navigate(['/quiz']);
@@ -41,9 +46,10 @@ export class ResultComponent implements OnInit {
 
 
   OnSubmit() {
-    this.quizService.submitScore().subscribe(() => {
-      this.restart();
-    });
+    //this.quizService.submitScore().subscribe(() => {
+      //this.restart();
+   // });
+   this.restart();
   }
 
   restart() {

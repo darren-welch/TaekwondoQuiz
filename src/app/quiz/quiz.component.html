@@ -14,13 +14,15 @@
         </div>
       </div>
       <div class="card-action">
-        <ul class="collection answer">
+        <div class="collection answer">
           <ng-container *ngFor="let option of quizService.qns[quizService.qnProgress].Options;let i = index">
-            <li *ngIf="option != null" class="collection-item" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)">
-              {{option}}
-            </li>
+            <div *ngIf="option != null" class="col m6" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)">
+              <div class="valign-wrapper" style="margin:15px 0 15px 0; border: 1px solid #000;">
+                <div class="collection-item boxsmall center-align">{{option}}</div>
+              </div>
+          </div>
           </ng-container>
-        </ul>
+        </div>
       </div>
     </div>
 

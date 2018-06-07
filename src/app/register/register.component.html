@@ -4,8 +4,8 @@
 <div class="row">
   
   <div class="col s6 offset-s3">
-    <div class="card z-depth-5">
-    <div class="col s12 center-align" >
+    <div class="card z-depth-5 blue-grey  white-text">
+    <div class="col s12 center-align" style="padding-top:1rem;" >
         
         <img src="/assets/img/tae-kwon-do.png" alt="" class="circle responsive-img valign profile-image-login">
         <h3 class="login-form-text">ITF Taekwondo Quiz</h3>
@@ -16,16 +16,16 @@
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix">account_circle</i>
-              <input autofocus type="text" name="Name" #Name ngModel required>
-              <label>Name</label>
+              <input class="white-text" autofocus type="text" name="Name" #Name ngModel required>
+              <label class="white-text">Name</label>
             </div>
           </div>
 
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix">mail_outline</i>
-              <input type="text" name="Email" #Email ngModel required [pattern]="emailPattern">
-              <label>Email</label>
+              <input class="white-text" type="text" name="Email" #Email ngModel required [pattern]="emailPattern">
+              <label class="white-text">Email</label>
             </div>
           </div>
 
@@ -33,17 +33,17 @@
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix">remove</i>
-              <select name="belt" #Belt ngModel required>
+              <select class="white-text" name="belt" #Belt ngModel required>
                 <option *ngFor="let b of belts" value="{{b}}">{{b}}</option>
 
               </select>
-              <label>Belt</label>
+              <label class="white-text">Belt</label>
             </div>
           </div>
 
           <div class="row">
             <div class="input-field col s12">
-              <button class="btn-large btn-submit" type="submit" [disabled]="!registerForm.valid">Start</button>
+              <button class="btn-large btn-submit white-text" type="submit" [disabled]="!registerForm.valid">Start</button>
             </div>
           </div>
         </form>

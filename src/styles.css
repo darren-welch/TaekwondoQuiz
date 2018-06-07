@@ -7,8 +7,17 @@ button.btn-submit{
     width:100%;
 }
 
-ul.answer li:hover{
-    background-color: #1b5e20;
-    color: #eafaf9;
+.valign-wrapper:hover{
+    font-size:larger;
     cursor: pointer;
 }
+
+.boxsmall
+{
+min-height: 10rem;
+width:100%;
+margin-top:2rem;
+}
+
+
+

@@ -17,7 +17,6 @@ export class QuizComponent implements OnInit {
     let ppant = JSON.parse(localStorage.getItem('participant'));
     this.setColours(ppant.Belt);
 
-
     if (parseInt(localStorage.getItem('seconds')) > 0) {
       this.quizService.seconds = parseInt(localStorage.getItem('seconds'));
       this.quizService.qnProgress = parseInt(localStorage.getItem('qnProgress'));
@@ -30,7 +29,8 @@ export class QuizComponent implements OnInit {
     else {
       this.quizService.seconds = 0;
       this.quizService.qnProgress = 0;
-      this.quizService.getQuestions().subscribe(
+
+      this.quizService.getQuestions(this.getNumericBelt(ppant.Belt)).subscribe(
         (data: any) => {
           this.quizService.qns = data;
           this.startTimer();
@@ -82,6 +82,33 @@ export class QuizComponent implements OnInit {
       } 
      }
     
+     
+  }
+
+  getNumericBelt(beltColour: string) : string
+  {
+       let beltNo : string;
+
+    switch(beltColour) { 
+      case "White": { 
+         beltNo = "10";
+         break; 
+      }
+      case "Yellow Tag": { 
+        beltNo = "9";
+        break; 
+     }
+     case "Yellow": { 
+      beltNo = "8";
+      break; 
+   }
+   case "Green Tag": { 
+    beltNo = "7";
+    
+    break; 
+ }
+}
+  return beltNo;  
      
   }
 

@@ -36,8 +36,8 @@ export class QuizService {
     return this.http.post(this.rootUrl + '/api/InsertParticipant', body);
   }
 
-  getQuestions() {
-    return this.http.get(this.rootUrl + '/api/Questions');
+  getQuestions(b:string) {
+    return this.http.get(this.rootUrl + '/api/Questions/'+b);
   }
 
   getAnswers() {
