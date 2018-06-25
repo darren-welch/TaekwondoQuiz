@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+
+
+<div class="row center">
+  <div class="col s12 m6 offset-m3">
+    <h2 class="header">Leaderboard</h2>
+    <div class="card horizontal">
+    
+    <div class="card-stacked">
+        <div *ngIf="quizService.lb">
+            
+            <table>
+                <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>Time Elapsed</th>
+                      <th>Score</th>
+                      <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+          
+              <ng-container *ngFor="let entry of quizService.lb;let i = index">
+                  
+                 <tr>
+      <td>{{entry.Name}}</td>
+      <td>{{entry.TimeSpent}}</td>
+      <td>{{entry.Score}}</td>
+      <td>{{entry.Dt | date:'dd-MMM, yyyy'}}</td>
+                 </tr> 
+                  
+              </ng-container> 
+          
+        </tbody>
+      </table> 
+
+      </div>        
+    </div>
+    <a class="btn-floating halfway-fab waves-effect waves-light red" (click)="restart()">
+        <i class="material-icons">replay</i> 
+      </a>
+      </div>
+  </div>  
+  </div>
+  

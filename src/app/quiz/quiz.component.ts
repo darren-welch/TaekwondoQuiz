@@ -55,23 +55,35 @@ export class QuizComponent implements OnInit {
          this.textColour = "black-text";
          break; 
       }
-      case "Yellow Tag": { 
+      case "Yellow Tag":  
+        case "Yellow": {
         this.bgColour = "yellow";
         this.textColour = "black-text";
         break; 
      }
-     case "Yellow": { 
-      this.bgColour = "yellow";
-      this.textColour = "black-text";
-      break; 
-   }
-   case "Green Tag": { 
+     
+   case "Green Tag":  
+    case "Green": {
     this.bgColour = "green darken-4";
     this.textColour = "white-text";
     break; 
  }
- case "Green": { 
-  this.bgColour = "green darken-4";
+ 
+case "Blue Tag":
+case "Blue": { 
+  this.bgColour = "blue";
+  this.textColour = "white-text";
+  break; 
+}
+case "Red Tag": 
+case "Red": { 
+  this.bgColour = "Red";
+  this.textColour = "white-text";
+  break; 
+}
+case "Black Tag": 
+case "Black": { 
+  this.bgColour = "Black";
   this.textColour = "white-text";
   break; 
 }

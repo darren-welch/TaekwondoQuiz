@@ -7,6 +7,8 @@ export class QuizService {
   //readonly rootUrl = 'http://localhost:49790/';
   readonly rootUrl = 'http://tkd-quiz-backend.azurewebsites.net/';
   qns: any[];
+  lb: any[];
+  lbLength: number;
   seconds: number;
   timer;
   qnProgress: number;
@@ -38,6 +40,10 @@ export class QuizService {
 
   getQuestions(b:string) {
     return this.http.get(this.rootUrl + '/api/Questions/'+b);
+  }
+
+  getLeaderboard(b:string) {
+    return this.http.get(this.rootUrl + '/api/leaderboard/'+b);
   }
 
   getAnswers() {

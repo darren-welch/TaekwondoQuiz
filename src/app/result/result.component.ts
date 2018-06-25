@@ -14,6 +14,7 @@ export class ResultComponent implements OnInit {
   constructor(private quizService: QuizService, private router: Router) { }
 
   ngOnInit() {
+    let bonus:number;
     if (parseInt(localStorage.getItem('qnProgress')) == 10) {
       this.quizService.seconds = parseInt(localStorage.getItem('seconds'));
       this.quizService.qnProgress = parseInt(localStorage.getItem('qnProgress'));
@@ -35,9 +36,9 @@ export class ResultComponent implements OnInit {
         }
       );
 
-        this.quizService.submitScore().subscribe(() => {
+        //this.quizService.submitScore().subscribe(() => {
           //this.restart();
-        });
+        //});
 
     }
     else
@@ -46,10 +47,10 @@ export class ResultComponent implements OnInit {
 
 
   OnSubmit() {
-    //this.quizService.submitScore().subscribe(() => {
-      //this.restart();
-   // });
-   this.restart();
+    this.quizService.submitScore().subscribe(() => {
+      this.router.navigate(['/leaderboard']); 
+    });
+   
   }
 
   restart() {
@@ -58,5 +59,6 @@ export class ResultComponent implements OnInit {
     localStorage.setItem('seconds', "0");
     this.router.navigate(['/quiz']);
   }
+  
 
 }

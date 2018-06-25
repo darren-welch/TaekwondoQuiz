@@ -14,10 +14,20 @@ button.btn-submit{
 
 .boxsmall
 {
-min-height: 10rem;
+min-height: 5rem;
 width:100%;
 margin-top:2rem;
 }
 
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
 
 

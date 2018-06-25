@@ -12,6 +12,7 @@ import { ResultComponent } from './result/result.component';
 import { appRoutes } from './routes';
 import { QuizService } from './shared/quiz.service';
 import { GuardGuard } from './auth/guard.guard';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { GuardGuard } from './auth/guard.guard';
     RegisterComponent,
     NavbarComponent,
     QuizComponent,
-    ResultComponent
+    ResultComponent,
+    LeaderboardComponent
   ],
   imports: [
     BrowserModule,

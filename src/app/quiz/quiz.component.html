@@ -16,7 +16,7 @@
       <div class="card-action">
         <div class="collection answer">
           <ng-container *ngFor="let option of quizService.qns[quizService.qnProgress].Options;let i = index">
-            <div *ngIf="option != null" class="col m6" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)">
+            <div *ngIf="option != null" class="col s12 m6" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)">
               <div class="valign-wrapper" style="margin:15px 0 15px 0; border: 1px solid #000;">
                 <div class="collection-item boxsmall center-align">{{option}}</div>
               </div>
