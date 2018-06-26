@@ -119,6 +119,43 @@ case "Black": {
     
     break; 
  }
+ case "Green": { 
+  beltNo = "6";
+  
+  break; 
+}
+case "Blue Tag": { 
+  beltNo = "5";
+  
+  break; 
+}
+case "Blue": { 
+  beltNo = "4";
+  
+  break; 
+}
+case "Red Tag": { 
+  beltNo = "3";
+  
+  break; 
+}
+case "Red": { 
+  beltNo = "2";
+  
+  break; 
+}
+case "Black Tag": { 
+  beltNo = "1";
+  
+  break; 
+}
+case "Black 1st Dan": { 
+  beltNo = "-1";
+  
+  break; 
+}
+
+
 }
   return beltNo;  
      

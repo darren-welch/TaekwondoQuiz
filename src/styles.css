@@ -30,4 +30,15 @@ body {
     flex: 1 0 auto;
   }
 
+.number
+{
+    color:#f00;
+    font-size:large;
+    padding-left:3rem;
+}
 
+/*Icon made by Freepik from www.flaticon.com | Edited by me */
+.belt-img
+{
+    width:10%;
+}

@@ -4,6 +4,9 @@
 <div class="row center">
   <div class="col s12 m6 offset-m3">
     <h2 class="header">Leaderboard</h2>
+    <img src='/assets/img/belts/{{cBelt}}-belt.png' alt="{{cBelt}} Belt" class="belt-img" />
+   
+
     <div class="card horizontal">
     
     <div class="card-stacked">
@@ -12,6 +15,7 @@
             <table>
                 <thead>
                   <tr>
+                    <th></th>
                       <th>Name</th>
                       <th>Time Elapsed</th>
                       <th>Score</th>
@@ -23,6 +27,7 @@
               <ng-container *ngFor="let entry of quizService.lb;let i = index">
                   
                  <tr>
+                   <td class="number">{{i+1}}.</td>
       <td>{{entry.Name}}</td>
       <td>{{entry.TimeSpent}}</td>
       <td>{{entry.Score}}</td>

@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
-questions  : any;
+
 
 
 

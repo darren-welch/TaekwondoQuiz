@@ -9,13 +9,14 @@ import { QuizService } from '../shared/quiz.service';
 })
 
 export class LeaderboardComponent implements OnInit {
-
+cBelt : string;
   constructor(private router: Router, public quizService: QuizService) { }
 
   ngOnInit() {
     let ppant = JSON.parse(localStorage.getItem('participant'));
-    let cBelt = ppant.Belt;
-    this.quizService.getLeaderboard(cBelt).subscribe(
+    this.cBelt = ppant.Belt;
+    
+    this.quizService.getLeaderboard(this.cBelt).subscribe(
       (data: any) => {
         this.quizService.lb = data;
        
