@@ -10,7 +10,7 @@ import { QuizService } from '../shared/quiz.service';
 
 export class LeaderboardComponent implements OnInit {
 
-  constructor(private router: Router, private quizService: QuizService) { }
+  constructor(private router: Router, public quizService: QuizService) { }
 
   ngOnInit() {
     let ppant = JSON.parse(localStorage.getItem('participant'));

@@ -11,7 +11,7 @@ export class QuizComponent implements OnInit {
   bgColour: string;
   textColour: string;
 
-  constructor(private router: Router, private quizService: QuizService) { }
+  constructor(private router: Router, public quizService: QuizService) { }
 
   ngOnInit() {
     let ppant = JSON.parse(localStorage.getItem('participant'));

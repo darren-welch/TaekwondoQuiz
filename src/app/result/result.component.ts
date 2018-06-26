@@ -8,14 +8,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
+questions  : any;
 
 
 
-  constructor(private quizService: QuizService, private router: Router) { }
+  constructor(public quizService: QuizService, private router: Router) { }
 
   ngOnInit() {
-    let bonus:number;
-    if (parseInt(localStorage.getItem('qnProgress')) == 10) {
+
+
+
+     if (parseInt(localStorage.getItem('qnProgress')) == 10) {
       this.quizService.seconds = parseInt(localStorage.getItem('seconds'));
       this.quizService.qnProgress = parseInt(localStorage.getItem('qnProgress'));
       this.quizService.qns = JSON.parse(localStorage.getItem('qns'));
