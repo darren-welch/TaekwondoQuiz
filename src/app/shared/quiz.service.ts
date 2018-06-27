@@ -59,4 +59,68 @@ export class QuizService {
     return this.http.post(this.rootUrl + "/api/UpdateOutput", body);
   }
 
+  setbgColour(beltColour: string) : string 
+  {
+    switch(beltColour) { 
+      case "White": { 
+         return "white";
+      }
+      case "Yellow Tag":
+      case "Yellow":  {
+        return "yellow";
+     }
+    case "Green Tag":  
+    case "Green": {
+    return "green darken-4"; 
+ }
+case "Blue Tag":
+case "Blue": { 
+  return "blue";
+}
+case "Red Tag": 
+case "Red": { 
+  return "red";
+  }
+case "Black Tag": 
+case "Black 1st Dan": { 
+  return "black";
+}
+default: {
+return "teal";      
+} 
+}
+}
+
+setTextColour(beltColour: string) : string 
+{
+  switch(beltColour) { 
+    case "White": { 
+       return "black-text";
+    }
+    case "Yellow Tag":
+    case "Yellow":  {
+      return "black-text";
+   }
+  case "Green Tag":  
+  case "Green": {
+  return "white-text"; 
+}
+case "Blue Tag":
+case "Blue": { 
+return "white-text";
+}
+case "Red Tag": 
+case "Red": { 
+return "white-text";
+}
+case "Black Tag": 
+case "Black 1st Dan": { 
+return "white-text";
+}
+default: {
+return "white-text";      
+} 
+}
+}
+
 }

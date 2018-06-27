@@ -8,14 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
-
-
-
+bgColour: string;
+textColour: string;
 
   constructor(public quizService: QuizService, private router: Router) { }
 
   ngOnInit() {
-
+    let ppant = JSON.parse(localStorage.getItem('participant'));
+    this.bgColour = this.quizService.setbgColour(ppant.Belt);
+    this.textColour = this.quizService.setTextColour(ppant.Belt);
 
 
      if (parseInt(localStorage.getItem('qnProgress')) == 10) {

@@ -3,7 +3,7 @@
   <div class="col s8 offset-s2">
     <h2 class="header">Completed!</h2>
     <div class="card horizontal">
-      <div class="card-image">
+      <div class="card-image hide-on-med-and-down">
         <img src="../../assets/img/Trophy.png" style="width: 250px;height : 250px;">
       </div>
       <div class="card-stacked">
@@ -22,10 +22,10 @@
     </div>
     
     <!-- Qn with correct answer -->
-    <h3>Questions</h3>
+    <h3>Correct answers</h3>
     <ng-container *ngFor="let qn of quizService.qns;let i=index">
-        <div class="card green darken-4">
-            <div class="card-content white-text">
+        <div class="card {{bgColour}}">
+            <div class="card-content {{textColour}}">
                 <span class="card-title">{{i+1}}</span>
                 <p>{{qn.Qn}}</p>
                 <div *ngIf="qn.ImageName!=null">
