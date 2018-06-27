@@ -11,8 +11,8 @@ An Angular 5 project I have created for a few reasons:
 
 ## Coming soon
 - [x] Get a basic version up and running.
-- [ ] Filter questions by selected belts. (backend project)
-- [ ] Include more belt options & update questions (frontend project)
-- [ ] Add leaderboard option. (Filtering out any bad names).
+- [x] Filter questions by selected belts. (backend project)
+- [x] Include more belt options & update questions (frontend project)
+- [x] Add leaderboard option. (Filtering out any bad names).
 - [ ] Include password authentication
 - [ ] Include profile page & option to submit questions for approval.
