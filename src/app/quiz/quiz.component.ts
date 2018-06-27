@@ -77,13 +77,13 @@ case "Blue": {
 }
 case "Red Tag": 
 case "Red": { 
-  this.bgColour = "Red";
+  this.bgColour = "red";
   this.textColour = "white-text";
   break; 
 }
 case "Black Tag": 
-case "Black": { 
-  this.bgColour = "Black";
+case "Black 1st Dan": { 
+  this.bgColour = "black";
   this.textColour = "white-text";
   break; 
 }
