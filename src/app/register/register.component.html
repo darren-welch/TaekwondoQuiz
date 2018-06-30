@@ -3,7 +3,7 @@
 
 <div class="row">
   
-  <div class="col s12 offset-m3 m6">
+  <div class="col s12 offset-l3 l6">
     <div class="card z-depth-5 blue-grey  white-text">
     <div class="col s12 center-align" style="padding-top:1rem;" >
         
@@ -24,7 +24,7 @@
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix">mail_outline</i>
-              <input class="white-text" type="text" id="txtEmail" name="Email" #Email ngModel required [pattern]="emailPattern">
+              <input class="white-text" type="text" id="txtEmail" name="Email" #Email ngModel required >
               <label for="txtEmail" class="white-text">Email</label>
             </div>
           </div>
@@ -43,7 +43,7 @@
 
           <div class="row">
             <div class="input-field col s12">
-              <button class="btn-large btn-submit white-text" (ng-click)="showLoading=true" type="submit" [disabled]="!registerForm.valid">Start</button>
+              <button class="btn-large btn-submit white-text" (click)="showLoading=true" type="submit" [disabled]="!registerForm.valid">Start</button>
             </div>
             <div class="progress" *ngIf="showLoading">
               <div class="indeterminate"></div>

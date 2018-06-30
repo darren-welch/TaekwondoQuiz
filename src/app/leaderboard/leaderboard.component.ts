@@ -13,6 +13,10 @@ cBelt : string;
   constructor(private router: Router, public quizService: QuizService) { }
 
   ngOnInit() {
+    if (parseInt(localStorage.getItem('qnProgress')) == 10) {
+      this.quizService.seconds = parseInt(localStorage.getItem('seconds'));
+      this.quizService.qnProgress = parseInt(localStorage.getItem('qnProgress'));
+      this.quizService.qns = JSON.parse(localStorage.getItem('qns'));
     let ppant = JSON.parse(localStorage.getItem('participant'));
     this.cBelt = ppant.Belt;
     
@@ -22,6 +26,11 @@ cBelt : string;
        
       }
     );
+  }
+  else
+{
+  this.router.navigate(['/quiz']);
+}
   }
 
   
