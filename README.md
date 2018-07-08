@@ -4,10 +4,7 @@ URL of live version: http://tkd-quiz.azurewebsites.net/
 
 An online tool to assist ITF Taekwondo practitioners with the theory for their gradings.  Currently supports 10th Kup to 1st Dan.  More belts will be added shortly.
 
-The questions for this website can be obtained from an API.
-
-### All questions
-http://tkd-quiz-backend.azurewebsites.net/api/questions
+The questions can be obtained from an API.
 
 ### Individual belt questions.
 - http://tkd-quiz-backend.azurewebsites.net/api/questions/10
