@@ -15,6 +15,7 @@ The questions include the current grade plus any previous gradings, as you would
 Use the Kup integer. e.g.
 - 10 > 10th Kup (White Belt)
 - 9  > 9th Kup (Yellow tag).
+
 For 1st dan, use -1.  2nd Dan will be -2 and so on.
 
 ## Version 2.0 Release features
