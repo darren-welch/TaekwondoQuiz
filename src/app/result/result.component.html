@@ -13,7 +13,7 @@
           <span>Time Elapsed : {{quizService.displayTimeElapsed()}}</span>
         </div>
         <div class="card-action">
-          <button class="btn" (click)="OnSubmit()">Submit this score</button> or <a href='#' (click)="restart()">try again?</a>
+          <button class="btn" (click)="OnSubmit()">Submit this score</button> or <a href='#' class="btn" (click)="restart()">try again?</a>
         </div>
       </div>
       <a class="btn-floating halfway-fab waves-effect waves-light red" (click)="restart()">
@@ -25,8 +25,10 @@
     <!-- Qn with correct answer -->
     <ul class="collapsible">
         <li>
-          <div class="collapsible-header"><i class="material-icons green-text">check_circle</i>View Correct answers</div>
-          <div class="collapsible-body"><span>
+            <div class="collapsible-header">
+              <i class="material-icons green-text">check_circle</i>View Correct answers
+            </div>
+          <div class="collapsible-body">
                 <ng-container *ngFor="let qn of quizService.qns;let i=index">
                         <div class="card {{bgColour}}">
                             <div class="card-content {{textColour}}">
@@ -52,7 +54,7 @@
                             </div>
                         </div>
                     </ng-container>
-          </span></div>
+          </div>
         </li>
     </ul>
 
