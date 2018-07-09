@@ -1,0 +1,9 @@
+.answerbox{
+height:10rem;
+cursor: pointer;
+}
+
+.valign-wrapper:hover{
+    font-size:larger;
+    cursor: pointer;
+}

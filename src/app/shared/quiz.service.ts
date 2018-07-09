@@ -17,7 +17,9 @@ export class QuizService {
   //---------------- Helper Methods---------------
   constructor(private http: HttpClient) { }
   displayTimeElapsed() {
-    return Math.floor(this.seconds / 3600) + ':' + Math.floor(this.seconds / 60) + ':' + Math.floor(this.seconds % 60);
+    return Math.floor(this.seconds / 3600) + ' Hours ' 
+    + Math.floor(this.seconds / 60) + ' Minutes ' 
+    + Math.floor(this.seconds % 60) + ' Seconds ';
   }
 
   getParticipantName() {
@@ -75,7 +77,7 @@ export class QuizService {
  }
 case "Blue Tag":
 case "Blue": { 
-  return "blue";
+  return "blue darken-4";
 }
 case "Red Tag": 
 case "Red": { 

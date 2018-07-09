@@ -1,56 +1,71 @@
 
+<ul id="slide-out" class="sidenav">
+    <li class="center-align"><img src="/assets/img/tae-kwon-do.png" alt="" class="circle responsive-img valign profile-image-login"></li>
+    <li> <form #registerForm="ngForm" (ngSubmit)="OnSubmit(Name.value, Email.value, Belt.value)">
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">account_circle</i>
+            <input autofocus type="text" id="txtName" name="Name" #Name ngModel required> {{registerForm.valid}}
+            <label for="txtName">Display name</label>
+          </div>
+        </div>
 
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">mail_outline</i> 
+            <input type="text" id="txtEmail" name="Email" #Email ngModel required [pattern]="emailPattern"> {{registerForm.valid}}
+             
+            <label for="txtEmail">Email</label>
+          </div>
+        </div>
 
-<div class="row">
+    
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">remove</i>
+            <select id="ddlBelt" name="belt" #Belt ngModel required>
+              <option *ngFor="let b of belts" value="{{b}}">{{b}}</option>
+
+            </select>
+            <label for="ddlBelt">Belt</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <button class="btn-large btn-submit" (click)="showLoading=true;" type="submit" [disabled]="!registerForm.valid">Start</button>
+          </div>
+          <div class="progress" *ngIf="showLoading">
+            <div class="indeterminate"></div>
+        </div>
+        </div>
+      </form></li>
+    
+  </ul>
   
-  <div class="col s12 offset-l3 l6">
-    <div class="card z-depth-5 blue-grey  white-text">
-    <div class="col s12 center-align" style="padding-top:1rem;" >
         
-        <img src="/assets/img/tae-kwon-do.png" alt="" class="circle responsive-img valign profile-image-login">
-        <h3 class="login-form-text">ITF Taekwondo Quiz</h3>
-        
-    </div>
-      <div class="card-content">
-        <form #registerForm="ngForm" (ngSubmit)="OnSubmit(Name.value, Email.value, Belt.value)">
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">account_circle</i>
-              <input class="white-text" autofocus type="text" id="txtName" name="Name" #Name ngModel required>
-              <label for="txtName" class="white-text">Display name</label>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">mail_outline</i>
-              <input class="white-text" type="text" id="txtEmail" name="Email" #Email ngModel required >
-              <label for="txtEmail" class="white-text">Email</label>
-            </div>
-          </div>
-
+<div class="row main-register2">
+   
+  <div class="col s12 m4">
       
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">remove</i>
-              <select id="ddlBelt" class="white-text" name="belt" #Belt ngModel required>
-                <option *ngFor="let b of belts" value="{{b}}">{{b}}</option>
+    <div class=''>
+        
+        <div class="card blue-grey darken-1">
 
-              </select>
-              <label for="ddlBelt" class="white-text">Belt</label>
+            <div class="card-content white-text">
+                <span class="card-title header-font bot-line">ITF Taekwondo Quiz</span>
+                <p class='tpad2'>Test your ITF TKD theory with this rapid, intense online test. <br /><br /> Simply fill your details and try to rise to the top of the leaderboard.</p>
             </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12">
-              <button class="btn-large btn-submit white-text" (click)="showLoading=true" type="submit" [disabled]="!registerForm.valid">Start</button>
-            </div>
-            <div class="progress" *ngIf="showLoading">
-              <div class="indeterminate"></div>
-          </div>
-          </div>
-        </form>
+            <div class="card-action center-align">
+                <a href="#" data-target="slide-out" class="sidenav-trigger">Register</a>
+    
+              </div>
+          
+        
+        
       </div>
-    </div>
+ 
+   </div>
   </div>
 </div>

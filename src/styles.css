@@ -7,10 +7,7 @@ button.btn-submit{
     width:100%;
 }
 
-.valign-wrapper:hover{
-    font-size:larger;
-    cursor: pointer;
-}
+
 
 .boxsmall
 {
@@ -42,3 +39,16 @@ body {
 {
     width:10%;
 }
+
+.header-font{
+    font-family: 'Cormorant Garamond', cursive;
+}
+
+.mont-font{
+    font-family: 'Montserrat', cursive;
+}
+
+.tpad2{
+    padding-top:1rem;
+}
+.p2{padding:1rem;}

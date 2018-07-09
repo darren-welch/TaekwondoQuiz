@@ -3,3 +3,29 @@
     height: 100px !important;
     text-align:center;
 }
+
+.main-register1{
+    background-image: url("/assets/img/uriel-soberanes-flying-kick.jpg");
+    background-repeat: no-repeat;
+    min-height: 700px;
+    background-size: cover;
+}
+.main-register2{
+    background-image: url("/assets/img/fervent-jan-bruceli.jpg");
+    background-repeat: no-repeat;
+    min-height: 700px;
+    background-size: cover;
+}
+
+
+.bot-line{
+    border-bottom:1px solid #ddd;   
+}
+@media only screen and (max-width: 600px) {
+    .main-register2 {
+        background-image: url("/assets/img/fervent-jan-bruceli-sm.jpg");
+        background-repeat: no-repeat;
+        height: 100%;
+        background-size: cover;
+    }
+}
