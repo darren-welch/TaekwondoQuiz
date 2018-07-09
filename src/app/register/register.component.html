@@ -5,7 +5,7 @@
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">account_circle</i>
-            <input autofocus type="text" id="txtName" name="Name" #Name ngModel required> {{registerForm.valid}}
+            <input autofocus type="text" id="txtName" name="Name" #Name ngModel required> 
             <label for="txtName">Display name</label>
           </div>
         </div>
@@ -13,7 +13,7 @@
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">mail_outline</i> 
-            <input type="text" id="txtEmail" name="Email" #Email ngModel required [pattern]="emailPattern"> {{registerForm.valid}}
+            <input type="text" id="txtEmail" name="Email" #Email ngModel required [pattern]="emailPattern"> 
              
             <label for="txtEmail">Email</label>
           </div>
