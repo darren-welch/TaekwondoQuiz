@@ -1,6 +1,6 @@
 # TaekwondoQuiz
 
-URL of live version: http://tkd-quiz.azurewebsites.net/
+URL of live version: http://tkdquiz.darrenwelch.co.uk/register
 
 An online tool to assist ITF Taekwondo practitioners with the theory for their gradings.  Currently supports 10th Kup to 1st Dan.  More belts will be added shortly.
 
